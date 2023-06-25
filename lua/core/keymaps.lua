@@ -58,5 +58,3 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end)
-
--- Maybe adding more keymaps yay it might work
