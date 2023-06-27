@@ -40,6 +40,7 @@ local plugins = {
 	"theprimeagen/harpoon",
 	"windwp/nvim-ts-autotag",
 	"MunifTanjim/prettier.nvim",
+	"barrett-ruth/live-server.nvim",
 
 	-- cmp plugins
 	"hrsh7th/nvim-cmp", -- The completion plugin
