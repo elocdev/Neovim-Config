@@ -13,6 +13,12 @@ keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
 keymap("n", "X", ":Bdelete<CR>", opts)
 keymap("n", "<leader>o", "<C-w>w", opts)
 
+-- Tmux navigation
+keymap("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
+keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
+keymap("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
+keymap("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
+
 -- Front and End of the line navigation
 keymap("n", "H", "_", opts)
 keymap("n", "L", "$", opts)
@@ -26,6 +32,10 @@ keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
 -- Moving highlighted lines in visual mode
 keymap("v", "J", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "K", ":m '<-2<CR>gv=gv", opts)
+
+-- Remaps to move down or up half page and center cursor
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
 
 -- Copy and Paste Keymaps
 keymap({ "n", "v" }, "<leader>y", [["+y]], opts)
@@ -58,3 +68,5 @@ keymap("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end)
+
+keymap("i", "jk", "<Esc>")

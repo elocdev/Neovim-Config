@@ -15,9 +15,23 @@ local plugins = {
 	-- Color Scheme
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "rose-pine/neovim", name = "rose-pine" },
-	{ "bluz71/vim-moonfly-colors", name = "moonfly" },
-
+	{
+		"bluz71/vim-moonfly-colors",
+		name = "moonfly",
+		lazy = false,
+		priority = 1000,
+	},
+	{
+		"bluz71/vim-nightfly-colors",
+		name = "nightfly",
+		lazy = false,
+		priority = 1000,
+	},
 	"nvim-tree/nvim-tree.lua",
+	{
+		"christoomey/vim-tmux-navigator",
+		lazy = false,
+	},
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
 	"nvim-treesitter/nvim-treesitter",
@@ -40,7 +54,11 @@ local plugins = {
 	"theprimeagen/harpoon",
 	"windwp/nvim-ts-autotag",
 	"MunifTanjim/prettier.nvim",
-	"barrett-ruth/live-server.nvim",
+	{
+		"barrett-ruth/live-server.nvim",
+		build = "yarn global add live-server",
+		config = true,
+	},
 
 	-- cmp plugins
 	"hrsh7th/nvim-cmp", -- The completion plugin

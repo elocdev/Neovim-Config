@@ -23,12 +23,14 @@ ts.setup({
 	highlight = {
 		enabled = true,
 		additional_vim_regex_highlight = false,
-		use_languagetree = true,
 	},
 	autopairs = {
 		enable = true,
 	},
 	indent = {
+		enable = true,
+	},
+	autotag = {
 		enable = true,
 	},
 })
