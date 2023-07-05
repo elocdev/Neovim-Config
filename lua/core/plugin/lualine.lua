@@ -33,7 +33,7 @@ local filetype = {
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "rose-pine",
+		theme = "nightfly",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
