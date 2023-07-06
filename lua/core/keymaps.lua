@@ -51,12 +51,15 @@ end)
 -- Making a file an executable
 keymap("n", "<leader>cx", "<cmd>!chmod +x %<CR>", opts)
 
+-- Terminal execution of Python files
+keymap("n", "<leader>rp", ":TermExec cmd='python3 %'<CR>")
+
 -- Trouble.nvim keymaps
-keymap("n", "<leader>xt", "<cmd>TroubleToggle<cr>", opts)
-keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
-keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
-keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
-keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+keymap("n", "<leader>xt", "<cmd>TroubleToggle<CR>", opts)
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>", opts)
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<CR>", opts)
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<CR>", opts)
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<CR>", opts)
 
 -- so command
 keymap("n", "<leader><leader>", ":so<CR>", opts)
@@ -70,3 +73,4 @@ keymap("n", "<leader>/", function()
 end)
 
 keymap("i", "jk", "<Esc>")
+keymap("n", "th", ":TSToggle highlight <CR>")

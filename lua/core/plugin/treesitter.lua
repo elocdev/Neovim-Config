@@ -18,12 +18,11 @@ ts.setup({
 		"html",
 	},
 
-	sync_install = false,
-	auto_install = true,
 	highlight = {
 		enabled = true,
 		additional_vim_regex_highlight = false,
 	},
+	auto_install = true,
 	autopairs = {
 		enable = true,
 	},

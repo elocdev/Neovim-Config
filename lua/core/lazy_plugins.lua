@@ -27,6 +27,12 @@ local plugins = {
 		lazy = false,
 		priority = 1000,
 	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
 	"nvim-tree/nvim-tree.lua",
 	{
 		"christoomey/vim-tmux-navigator",
@@ -34,8 +40,10 @@ local plugins = {
 	},
 	"nvim-tree/nvim-web-devicons",
 	"nvim-lualine/lualine.nvim",
-	"nvim-treesitter/nvim-treesitter",
-	"nvim-treesitter/nvim-treesitter-context",
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+	},
 	"windwp/nvim-autopairs",
 	"numToStr/Comment.nvim",
 	{
@@ -72,7 +80,6 @@ local plugins = {
 	-- snippets
 	"L3MON4D3/LuaSnip", --snippet engine
 	"rafamadriz/friendly-snippets", -- a bunch of snippets to
-
 	-- LSP
 	"williamboman/mason.nvim",
 	"nvim-lua/plenary.nvim",

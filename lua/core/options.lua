@@ -28,3 +28,14 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+
+vim.api.nvim_create_autocmd("BufEnter", { command = ":TSEnable highlight" })
+
+vim.api.nvim_create_augroup("highlight", { clear = true })
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
+	group = "highlight",
+	pattern = { "*.py" },
+	callback = function()
+		vim.cmd(":TSEnable highlight")
+	end,
+})

@@ -17,3 +17,5 @@ end
 keymap("n", "<leader>dt", ":DapToggleBreakpoint<CR>")
 keymap("n", "<leader>dx", ":DapTerminate<CR>")
 keymap("n", "<leader>do", ":DapStepOver<CR>")
+keymap("n", "<leader>dpr", "<cmd>lua require('dap-python').test_method()<CR>")
+keymap("n", "<leader>dc", "<cmd>lua require('dap-python').close()<CR>")
