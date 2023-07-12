@@ -90,6 +90,7 @@ local plugins = {
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
 	"jose-elias-alvarez/null-ls.nvim",
+	"elocdev/null-ls-archived.nvim",
 
 	-- DAP
 	"mfussenegger/nvim-dap",
@@ -118,7 +119,7 @@ local opts = {
 		lazy = false,
 	},
 	install = {
-		colorscheme = { "catppuccin" },
+		colorscheme = { "nightfly" },
 	},
 	ui = {
 		border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
