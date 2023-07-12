@@ -16,6 +16,7 @@ ts.setup({
 		"yaml",
 		"tsx",
 		"html",
+		"norg",
 	},
 
 	highlight = {

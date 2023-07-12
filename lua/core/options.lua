@@ -28,6 +28,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.opt.conceallevel = 2
+vim.opt.foldlevel = 99
 
 vim.api.nvim_create_autocmd("BufEnter", { command = ":TSEnable highlight" })
 

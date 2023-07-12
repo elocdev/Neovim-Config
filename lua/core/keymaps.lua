@@ -72,5 +72,6 @@ keymap("n", "<leader>/", function()
 	require("Comment.api").toggle.linewise.current()
 end)
 
+keymap("n", "<leader>ne", ":Neorg export to-file<Space>")
+
 keymap("i", "jk", "<Esc>")
-keymap("n", "th", ":TSToggle highlight <CR>")

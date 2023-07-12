@@ -16,22 +16,16 @@ local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "rose-pine/neovim", name = "rose-pine" },
 	{
-		"bluz71/vim-moonfly-colors",
-		name = "moonfly",
-		lazy = false,
-		priority = 1000,
-	},
-	{
 		"bluz71/vim-nightfly-colors",
 		name = "nightfly",
 		lazy = false,
 		priority = 1000,
 	},
 	{
-		"folke/tokyonight.nvim",
+		"glepnir/zephyr-nvim",
+		requires = { "nvim-treesitter/nvim-treesitter", opt = true },
 		lazy = false,
 		priority = 1000,
-		opts = {},
 	},
 	"nvim-tree/nvim-tree.lua",
 	{
@@ -66,6 +60,16 @@ local plugins = {
 		"barrett-ruth/live-server.nvim",
 		build = "yarn global add live-server",
 		config = true,
+	},
+	{
+		"nvim-neorg/neorg",
+		build = ":Neorg sync-parsers",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-cmp",
+		},
+		cmd = "Neorg",
 	},
 
 	-- cmp plugins
